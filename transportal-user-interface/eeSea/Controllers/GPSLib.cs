@@ -103,7 +103,7 @@ namespace eeSea.Controllers
                             continue;
 
                         string Latitude = item.Value[j].Latitude.ToString();
-                        string Longitude = item.Value[j].Latitude.ToString();
+                        string Longitude = item.Value[j].Longitude.ToString();
 
                         // create a line of JavaScript for marker on map for this record 
 
