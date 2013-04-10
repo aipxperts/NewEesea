@@ -238,6 +238,7 @@ namespace eeSea.Controllers
                 }
             }
             Session["LinkModel"] = ObjLinkModel;
+            
             return PartialView(ObjLinkModel);
         }
 

@@ -41,6 +41,7 @@
 </style>
 <table width="100%" border="0" id="tblContent">
     <tr>
+        
         <td id="tdCont" height="500px" valign="top" align="center">
             <div id="loading" style="display: none;" class="innerDiv">
                 <span style="color: #EE7409; font-size: 13px;">Please wait while loading data ...</span><br />
@@ -49,11 +50,9 @@
             <div id="data-grid" style="overflow: auto;">
                 @Html.Partial("GetLocationsResuls", (IEnumerable<eeSea.Models.Location>)ViewBag.Locations)
             </div>
-            <div id="data-grid1" style="overflow: auto; float: left">
-                @*@Html.Partial("GetAllLinkDefinitions",(IEnumerable<eeSea.Models.Link>)ViewBag.AllLocationLinks)*@
-
-                @Html.Partial("GetAllLinkDefinitions", (eeSea.Models.Link)ViewBag.AllLocationLinks, new ViewDataDictionary(this.ViewData));
-            </div>
+          @*  <div id="data-grid1" style="overflow: auto; float: left">
+                 @Html.Partial("GetAllLinkDefinitions", (eeSea.Models.Link)ViewBag.AllLocationLinks, new ViewDataDictionary(this.ViewData));
+            </div>*@
         </td>
         <td valign="top" id="toggle">
             <div id='sideToggleShow'>
@@ -84,6 +83,7 @@
                     <tr align="left">
                         <td height="25px"></td>
                         <td>
+                           
                             <input value="Go" type="submit" class="btnSearch" />
                         </td>
                     </tr>
@@ -92,7 +92,7 @@
                     </tr>
                 </table>
             }
-            @using (Ajax.BeginForm("GetAllLinkDefinitions", "Locations", new AjaxOptions { UpdateTargetId = "data-grid1", LoadingElementDuration = 1000, LoadingElementId = "loading", HttpMethod = "GET" }))
+            @*@using (Ajax.BeginForm("GetAllLinkDefinitions", "Locations", new AjaxOptions { UpdateTargetId = "data-grid1", LoadingElementDuration = 1000, LoadingElementId = "loading", HttpMethod = "GET" }))
             {
                 <table border="0" height="225px">
                     <tr align="left">
@@ -121,7 +121,7 @@
                         <td colspan="2"></td>
                     </tr>
                 </table>
-            }
+            }*@
             <table height="50px" width="100%" border="0">
                 <tr>
                     <td colspan="2" height="25px" width="100%">
